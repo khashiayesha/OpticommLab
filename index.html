@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optical Communication Laboratory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-logo-container">
+        <img src="img/logo-opticom.jpg" alt="Opticom Logo" class="main-logo" />
+        <a href="#" class="navbar-logo"
+          >Optical Communication <span>Laboratory</span></a
+        >
+      </div>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#module">Module</a>
+        <a href="#assistant">Assistant</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <section class="hero active-section" id="home">
+  <main class="content">
+    <h4>WELCOME TO OPTICOM LABORATORY</h4>
+    <h1>BEYOND THE <span>SPEED OF LIGHT</span></h1>
+    <p>
+      Exploring the limitless possibilities of optical communication and
+      fiber optic technology to connect the world faster.
+    </p>
+
+    <div class="quick-menu">
+      <div class="menu-card" onclick="showSection('about')">
+        <i data-feather="info"></i>
+        <h3>About Us</h3>
+        <p>Our laboratory's vision, mission, contributions and activities.</p>
+      </div>
+      <div class="menu-card" onclick="showSection('module')">
+        <i data-feather="book-open"></i>
+        <h3>Module</h3>
+        <p>Practical modules and learning videos.</p>
+      </div>
+      <div class="menu-card" onclick="showSection('assistant')">
+        <i data-feather="users"></i>
+        <h3>Assistant</h3>
+        <p>Get to know our lab and research assistants.</p>
+      </div>
+      <div class="menu-card" onclick="showSection('contact')">
+        <i data-feather="mail"></i>
+        <h3>Contact</h3>
+        <p>Contact us for more info.</p>
+      </div>
+      <div class="menu-card" onclick="openCalc()">
+  <div class="card-icon">
+    <i data-feather="settings"></i>
+  </div>
+  <h3>Numerical Aperture calculator</h3>
+  <p>Calculate Numerical Aperture value instantly.</p>
+</div>
+
+<div id="calcModal" class="modal-overlay">
+  <div class="modal-box">
+    <span class="close-btn" onclick="closeCalc()">&times;</span>
+    <div class="modal-header">
+      <h3>Numerical Aperture <span>Calculator</span></h3>
+      <p>Calculate the ability of optical fiber to capture light.</p>
+    </div>
+    
+    <div class="calc-inputs">
+      <div class="input-field">
+        <label>Indeks Bias Core (n1)</label>
+        <input type="number" id="n1" step="0.0001" placeholder="example: 1.48">
+      </div>
+      <div class="input-field">
+        <label>Indeks Bias Cladding (n2)</label>
+        <input type="number" id="n2" step="0.0001" placeholder="example: 1.46">
+      </div>
+      <button onclick="runCalculation()" class="cta-calc">Hitung Sekarang</button>
+    </div>
+    <div id="na-result" class="result-display">
+      </div>
+  </div>
+</div>
+  </main>
+</section>
+
+  <section id="about" class="about">
+  <div class="about-container">
+    <div class="section-title">
+    <h2><span>About</span> Us</h2>
+    </div>
+
+    <div class="about-img-hero">
+        <img src="img/about-us.jpg" alt="About Opticom" />
+      </div>
+      <div class="main-desc">
+        <h3>Optical Communication Laboratory</h3>
+        <p>
+          The Optical Communication Laboratory is a research laboratory focused on optical communication technology and fiber optic (FTTH) systems.
+        </p>
+      </div>
+
+        <div class="vision-mission-grid">
+          <div class="visi">
+            <h4>VISION</h4>
+            <p>To become an internationally accredited Telecommunications Engineering undergraduate program actively involved in the development of education, research, and entrepreneurship in the field of digital telecommunications engineering.</p>
+          </div>
+          <div class="misi">
+            <h4>MISSION</h4>
+            <p>To provide an excellent and internationally accredited education program that includes and accommodates entrepreneurship initiatives.
+
+To develop and disseminate telecommunications science and technology, especially in wireless communication, recognized globally.
+
+To organize entrepreneurship programs among the academic community, focusing on technology-based telecommunications innovations.
+
+To apply telecommunications science and technology for the betterment of national civilization and the global community.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-projects">
+  <div class="activity-header">
+    <h4>OUR CONTRIBUTIONS</h4>
+    <h2>Research & <span>Projects</span></h2>
+  </div>
+
+  <div class="project-container">
+    <div class="research-card">
+      <div class="research-image">
+        <img src="img/bina-desa.jpg" alt="Rainwater Monitoring">
+      </div>
+      <div class="research-content">
+        <h3>Automated Monitoring System for Rainwater Harvesting Tank at Telkom University</h3>
+        <p>This research aims to develop a remote monitoring device based on the Internet of Things (IoT) that monitors pH values, water surface height, dissolved substance content, and water clarity levels in ground tanks.</p>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <div class="research-image">
+        <img src="img/bina-desa.jpg" alt="Flood Detection">
+      </div>
+      <div class="research-content">
+        <h3>Basic research study of flood detection early warning system based on Optical LiDAR integration of solar energy and Internet of Things</h3>
+        <p>Research Scheme for Research for Beginner Lecturers Period 1 Wave 4 Fiscal Year 2025 Telkom University</p>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <div class="research-image">
+        <img src="img/bina-desa.jpg" alt="Intelligent Decoding">
+      </div>
+      <div class="research-content">
+        <h3>Intelligent decoding using convolutional neural networks for long-distance optical communication in free space</h3>
+        <p>Internal fund research for the 2025 fiscal year, period 1, Telkom University - non-cooperative research scheme.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="about-activities">
+      <div class="activity-header">
+        <h4>WHAT WE DO</h4>
+        <h2>Our <span>Activities</span></h2>
+      </div>
+      
+      <div class="activity-container">
+        <div class="activity-card">
+          <div class="activity-image">
+            <img src="img/bina-desa.jpg" alt="Bina Desa" />
+          </div>
+          <div class="activity-content">
+            <h3>Bina Desa</h3>
+            <p>Community service program to introduce communication technology in rural areas.</p>
+          </div>
+        </div>
+        <div class="activity-card">
+          <div class="activity-image">
+            <img src="img/bina-desa.jpg" alt="Bina Desa" />
+          </div>
+          <div class="activity-content">
+            <h3>Pengabdian masyarakat</h3>
+            <p>Integration of xPON and RT/RW Net based on appropriate technology for the development of Cimaragas digital village in the impactful fostered village program.</p>
+          </div>
+        </div>
+        <div class="activity-card">
+          <div class="activity-image">
+            <img src="img/open-lab.png" alt="Open Laboratory" />
+          </div>
+          <div class="activity-content">
+            <h3>Open Laboratory</h3>
+            <p>Opportunity for students to explore lab facilities and demonstrate optical devices.</p>
+          </div>
+        </div>
+        <div class="activity-card">
+          <div class="activity-image">
+            <img src="img/bina-desa.jpg" alt="Study Group" />
+          </div>
+          <div class="activity-content">
+            <h3>Study Group</h3>
+            <p>A collaborative learning forum for students to discuss and deepen their knowledge of telecommunications technology.</p>
+          </div>
+        </div>
+        <div class="activity-card">
+  <div class="activity-image">
+    <img src="img/bina-desa.jpg" alt="Open Recruitment" />
+  </div>
+  <div class="activity-content">
+    <h3>Open Recruitment</h3>
+    <p>Become part of our family! We open opportunities for dedicated students to join as laboratory assistants and researchers.</p>
+  </div>
+</div>
+<div class="activity-card">
+  <div class="activity-image">
+    <img src="img/bina-desa.jpg" alt="Comparative Study" />
+  </div>
+  <div class="activity-content">
+    <h3>Comparative Study</h3>
+    <p>Visiting other institutions or industries to exchange knowledge and stay updated with the latest optical technology trends.</p>
+  </div>
+</div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section id="module" class="module">
+  <div class="container">
+  <div class="module-header">
+    <div>
+      <h4 class="resource-label">RESOURCE</h4>
+      <h2 class="module-title">Our Modules</h2>
+    </div>
+  </div>
+
+  <div class="module-grid">
+  <div class="module-card" onclick="viewModule(1)">
+    <img src="img/fiber2.jpg" alt="Module" />
+    <div class="module-info">
+      <small>Advanced</small>
+      <h4>Module 1: Basic Concepts of Fiber Optics and Numerical Aperture Measurement</h4>
+      <i data-feather="file-text"></i>
+    </div>
+  </div>
+
+  <div class="module-card" onclick="viewModule(2)">
+    <img src="img/fiber2.jpg" alt="Module" />
+    <div class="module-info">
+      <small>Advanced</small>
+      <h4>Module 2: Optical measurement techniques using OTDR and OPM</h4>
+      <i data-feather="file-text"></i>
+    </div>
+  </div>
+
+  <div class="module-card" onclick="viewModule(3)">
+    <img src="img/fiber2.jpg" alt="Module" />
+    <div class="module-info">
+      <small>Advanced</small>
+      <h4>Module 3: Splicing Optical Fibers using a Fusion Splicer</h4>
+      <i data-feather="file-text"></i>
+    </div>
+  </div>
+</div>
+
+<div id="moduleModal" class="modal-overlay">
+  <div class="modal-box">
+    <span class="close-btn" onclick="closeModule()">&times;</span>
+    <div id="module-content">
+      </div>
+  </div>
+</div>
+
+   <div class="video-container">
+    <div class="video-card">
+        <div class="video-wrapper">
+            <a href="https://www.youtube.com/watch?v=HY9podlmS1s" target="_blank">
+                <img src="img/vidmodul1.png">
+                <div class="play-overlay">
+                    <i data-feather="play"></i>
+                </div>
+            </a>
+        </div>
+        <div class="video-info">
+            <h4>Module 1</h4>
+            <p>Basic Concepts of Fiber Optics and Numerical Aperture Measurement.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <div class="video-wrapper">
+            <a href="https://www.youtube.com/watch?v=zKu5Sm9NfuI" target="_blank">
+                <img src="img/vidmodul2.png">
+                <div class="play-overlay">
+                    <i data-feather="play"></i>
+                </div>
+            </a>
+        </div>
+        <div class="video-info">
+            <h4>Module 2</h4>
+            <p>Optical measurement techniques using OTDR and OPM.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <div class="video-wrapper">
+            <a href="https://www.youtube.com/watch?v=HY9podlmS1s" target="_blank">
+                <img src="img/vidmodul3.png">
+                <div class="play-overlay">
+                    <i data-feather="play"></i>
+                </div>
+            </a>
+        </div>
+        <div class="video-info">
+            <h4>Module 3</h4>
+            <p>Splicing Optical Fibers using a Fusion Splicer.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+
+   <section id="assistant" class="assistant">
+  <div class="container">
+    <h2>OUR <span>ASSISTANTS</span></h2>
+
+    <div class="filter-buttons">
+      <button class="btn-filter active" onclick="filterSelection('all')">SHOW ALL</button>
+      <button class="btn-filter" onclick="filterSelection('praktikum')">PRAKTIKUM</button>
+      <button class="btn-filter" onclick="filterSelection('research')">RESEARCH</button>
+    </div>
+
+    <div class="asisten-container">
+      <div class="asisten-card praktikum">
+        <img src="img/dean.png" alt="Dean Syahallah" />
+
+        <div class="asisten-info">
+          <small>Asisten</small>
+          <h3>Dean Syahallah</h3>
+          <p>Praktikum Assistant</p>
+          <a href="https://www.instagram.com/deandesannn/?utm_source=ig_web_button_share_sheet" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card praktikum">
+        <img src="img/zarah.png" alt="A. Nurmayzarah" />
+
+        <div class="asisten-info">
+          <small>Asisten</small>
+          <h3>A. Nurmayzarah</h3>
+          <p>Praktikum Assistant</p>
+          <a href="https://www.instagram.com/myzarahh?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card praktikum">
+        <img src="img/chandra.png" alt="Chandra Daulay" />
+
+        <div class="asisten-info">
+          <small>Asisten</small>
+          <h3>Chandra Daulay</h3>
+          <p>Praktikum Assistant</p>
+          <a href="https://www.instagram.com/chandra_dly/?utm_source=ig_web_button_share_sheet" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card praktikum">
+        <img src="img/faiza.png" alt="Faiza Murni" />
+        <div class="asisten-info">
+          <h3>Faiza Murni</h3>
+          <p>Praktikum Assistant</p>
+          <a href="https://www.instagram.com/c.estzaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card praktikum">
+        <img src="img/bhama.png" alt="Bhama Aryo" />
+        <div class="asisten-info">
+          <h3>Bhama Aryo</h3>
+          <p>Praktikum Assistant</p>
+          <a href="https://www.instagram.com/bhama_aryo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card praktikum">
+        <img src="img/vania.png" alt="Vania Khalishah A" />
+        <div class="asisten-info">
+          <h3>Vania Khalishah A</h3>
+          <p>Praktikum Assistant</p>
+          <a href="https://www.instagram.com/vaniakhalis/?utm_source=ig_web_button_share_sheet" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card praktikum">
+        <img src="img/josephine.png" alt="Josephine Monica" />
+        <div class="asisten-info">
+          <h3>Josephine Monica</h3>
+          <p>Praktikum Assistant</p>
+          <a href="https://www.instagram.com/josephinemncaa/?utm_source=ig_web_button_share_sheet" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card praktikum">
+        <img src="img/arafa.png" alt="Mhd Arafa" />
+        <div class="asisten-info">
+          <h3>Mhd Arafa</h3>
+          <p>Praktikum Assistant</p>
+          <a href="https://www.instagram.com/rfandk/?utm_source=ig_web_button_share_sheet" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card praktikum">
+        <img src="img/yassar.png" alt="Yassar Ahmad Alif" />
+        <div class="asisten-info">
+          <h3>Yassar Ahmad Alif</h3>
+          <p>Praktikum Assistant</p>
+          <a href="https://www.instagram.com/ycxhx__/?utm_source=ig_web_button_share_sheet" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card research">
+        <img src="img/rayhan.png" alt="Rayhan Hafizan" />
+        <div class="asisten-info">
+          <h3>Rayhan Hafizan</h3>
+          <p>Research Assistant</p>
+          <a href="https://www.instagram.com/hannzz_zn/?utm_source=ig_web_button_share_sheet" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card research">
+        <img src="img/agus.png" alt="AGUS" />
+        <div class="asisten-info">
+          <h3>AGUS</h3>
+          <p>Research Assistant</p>
+          <a href="https://www.instagram.com/_rrjrubyjane/?utm_source=ig_web_button_share_sheet" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card research">
+        <img src="img/devin.png" alt="Devin K" />
+        <div class="asisten-info">
+          <h3>Devin K</h3>
+          <p>Research Assistant</p>
+          <a href="#" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card research">
+        <img src="img/yosef.png" alt="Devin K" />
+        <div class="asisten-info">
+          <h3>Yosef ivan ramiro purba</h3>
+          <p>Research Assistant</p>
+          <a href="https://www.instagram.com/ramiro_purba?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card research">
+        <img src="img/ryu.png" alt="Devin K" />
+        <div class="asisten-info">
+          <h3>Ryu Khalfani Hidayat</h3>
+          <p>Research Assistant</p>
+          <a href="https://www.instagram.com/ryukhalfani?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card research">
+        <img src="img/bagas.png" alt="Devin K" />
+        <div class="asisten-info">
+          <h3>Fadli Pandu Bagaskoro</h3>
+          <p>Research Assistant</p>
+          <a href="https://www.instagram.com/pandubgz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card research">
+        <img src="img/qonia.png" alt="Devin K" />
+        <div class="asisten-info">
+          <h3>Qonia Rahmadani</h3>
+          <p>Research Assistant</p>
+          <a href="https://www.instagram.com/qoniarahmadanii?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card research">
+        <img src="img/farhan.png" alt="Devin K" />
+        <div class="asisten-info">
+          <h3>Ahmad Farhan Fitrianto</h3>
+          <p>Research Assistant</p>
+          <a href="https://www.instagram.com/_farhannaf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card research">
+        <img src="img/yasyfa.png" alt="Devin K" />
+        <div class="asisten-info">
+          <h3>Sulthan Yasyfa Pusponegoro</h3>
+          <p>Research Assistant</p>
+          <a href="https://www.instagram.com/yasfa_p?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card research">
+        <img src="img/aditya.png" alt="Devin K" />
+        <div class="asisten-info">
+          <h3>Aditya Destra Wicaksono</h3>
+          <p>Research Assistant</p>
+          <a href="#" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="asisten-card research">
+        <img src="img/yulya.png" alt="Devin K" />
+        <div class="asisten-info">
+          <h3>Yulya Rahayu Sidabutar</h3>
+          <p>Research Assistant</p>
+          <a href="https://www.instagram.com/yulyarahayuu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="ig-link"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <section id="contact" class="contact">
+  <h2><span>Contact</span> Us</h2>
+  <p>Contact us for more information about research and practicums.</p>
+
+  <div class="contact-container">
+    <div class="contact-map" style="flex: 1 1 50%;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.303994080997!2d107.62783107356884!3d-6.973416293027291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9adf177bf8d%3A0x437398556f9fa03!2sTelkom%20University!5e0!3m2!1sen!2sus!4v1768983567094!5m2!1sen!2sus"
+        width="100%" height="100%" style="border:0; min-height: 400px;" 
+        allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="contact-social-side">
+      <div class="social-header">
+        <h3>Our Social Media</h3>
+        <p>Follow us for latest updates</p>
+      </div>
+
+      <div class="social-list">
+        <a href="https://www.instagram.com/opticommlaboratory" target="_blank" class="social-card-mini">
+          <div class="icon instagram"><i data-feather="instagram"></i></div>
+          <div class="text">
+            <h4>Instagram</h4>
+            <p>@opticommlaboratory</p>
+          </div>
+        </a>
+
+        <a href="https://youtube.com/@opticommlaboratorytel-u" target="_blank" class="social-card-mini">
+          <div class="icon youtube"><i data-feather="youtube"></i></div>
+          <div class="text">
+            <h4>YouTube</h4>
+            <p>Opticom Laboratory</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="address-bottom">
+        <i data-feather="map-pin"></i>
+        <span>TULT 11.09, Telkom University, Bandung.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer class="footer-distributed">
+  <div class="footer-container">
+    <div class="footer-column">
+      <img src="img/logo-opticom.jpg" alt="Logo Opticom" class="footer-logo" />
+      <h3>Optical Communication Laboratory</h3>
+      <p>Telkom University</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
+        <li><a href="javascript:void(0)" onclick="showSection('about')">About Us</a></li>
+        <li><a href="javascript:void(0)" onclick="showSection('assistant')">Assistant</a></li>
+        <li><a href="javascript:void(0)" onclick="showSection('contact')">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p class="address">
+        TULT 11.09, Jl. Telekomunikasi Trs. Buah Batu, Bandung, 40257
+      </p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/opticommlaboratory?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i data-feather="instagram"></i></a>
+        <a href="https://youtube.com/@opticommlaboratorytel-u?si=NiVZpbx-Eg-JnFWu"><i data-feather="youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2026 Optical Communication Laboratory. All rights reserved.</p>
+  </div>
+</footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
